@@ -124,42 +124,42 @@ console.log("pi");
 // any numerical value like 1,2,2.0,-1 is a number datatype 
 let f = 23;//This is a number data type
 console.log(f);
-typeof f
+console.log(typeof f);
 
 //2.string
 // any text is a string datatype
 let f1 = "akshay_kumar"; //This is a string data type
 console.log(f1);
-typeof f1
+console.log(typeof f1);
 
 //3.bollean
 //false & true is boolean data type  
 let isunfollow = false //This is a boolean  data type
 console.log(isunfollow);
-typeof isunfollow
+console.log(typeof isunfollow);
 
 //4.undefined
 //by default everything is uindefined  
 let f3; //This is a undefined  data type
 console.log(f3);
-typeof f3
+console.log(typeof f3);
 
 //5.null
 // null means abscence of values 
 let f4 = null; //This is a null  which is a object data type
 console.log(f4);
-typeof f4 // it will be object
+console.log(typeof f4); // it will be object
 
 //6.BIGINT
 // bigint just like number but it  includes n in last
 let f5 = BigInt("124"); //This is a bigint data type
 console.log(f5);
-typeof f5 // it will be bigint
+console.log(typeof f5); // it will be bigint
 
 //6.symbol 
 let f6 = Symbol("game"); //This is symbol datatype
 console.log(f6);
-typeof f6// it will be symbol datatype
+console.log(typeof f6);// it will be symbol datatype
 
 //B. NON PRIMITIVE DATATYPES
 

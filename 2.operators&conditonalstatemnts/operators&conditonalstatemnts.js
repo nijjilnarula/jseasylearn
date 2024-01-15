@@ -14,9 +14,9 @@
 // 3.comparison operators
 // 4.logical operators
 // 5.string operators 
-// 6.bitwise operators 
-// 7.ternary operators 
-// 8.type operators 
+// 6.ternary operators 
+// 7.type operators 
+// 8.bitwise operators 
 
 
 // 1.arthmeric operators 
@@ -286,7 +286,7 @@ let g3 = 5;
 let h3 = 5;
 console.log(!(g3 != h3));
 
-// 4.string operator 
+// 5.string operator 
 // string operators are used to perform operations on string
 //there ae 2 type of string operators
 // 1. +
@@ -314,4 +314,159 @@ console.log(d9);
 d9+=a11;
 console.log(d9+10);//the no will only be added with a string 
 
+//6.terniary operator 
+//terniary opertors are just concise way to write a conditonal statement 
+//synatx:- (condition)?if true this will be executed:if false this will be executed;
+//for exp:- let a=5;let b=5;(a==b)?a&b are equal :a&b are not equal;
+let d10= 2;
+let c8= 5;
+(c>5)?console.log("d is smaller than c"):console.log("c is smaller than d");
 
+//7.type operator 
+//type operator used to know what type of value is given
+//there two types of type operator
+// 1.typeof
+// 2.instanceof 
+
+//1.typeof
+//typeof operator returns the datatype of the value 
+//syntax:-typeof(variabale);
+let c9={
+    subject:"maths",
+    marks:20,
+    ispass:false,
+    names:undefined,
+    address:null,
+    rollno:BigInt(2344),
+    house:Symbol("ruby")
+};
+console.log(typeof(c9.subject));//output:- string 
+console.log(typeof(c9.marks));//output:- number
+console.log(typeof(c9.ispass));//output:- boolean
+console.log(typeof(c9.names));//output:- undefined
+console.log(typeof(c9.address));//output:- object
+console.log(typeof(c9.rollno));//output:- bigint
+console.log(typeof(c9.house));//output:- symbol
+
+//2.instanceof
+//instanceof operator tell wether an object is the instance of a perticular class or not(if true it is) 
+//instanceof operator returns a boolean value
+//syntax: objectname instanceof objectype
+const factory={
+    car:["honda","mercedes"],
+    model:["civic","e"],
+    price:[2000000,10000000]
+};
+const d11 =[2000000,10000000];
+console.log(factory instanceof Array);
+console.log(factory instanceof Object);
+console.log(d11 instanceof Array);
+
+// 8.bitwise operator 
+// bitwise operators performs operations on binary level 
+// output is always in numbers
+// for exp :-  a=5;b=4,a&b;//output :- 100;
+//there ae 7 type of bitwise operators
+// 1.&
+// 2.|
+// 3.^
+// 4.~
+// 5.<<
+// 6.>>
+// 7.>>>
+
+// 1. &
+// this is called bitwise and
+// this bitwise operator set bit to 1 if both sides bits are 1
+// for exp:- a=5;b=10,a&b;//output :- 0;
+// ----------------------------
+// |  |__8__|__4__|__2__|__1__|
+// |5 |__0__|__1__|__0__|__1__|
+// |__|__ __|__ __|__ __|__ __|
+// |10|__1__|__0__|__1__|__0__|
+// |__|__ __|__ __|__ __|__ __|
+// | t|__0__|__0__|__0__|__0__|
+// ----------------------------
+let a12 = 5;
+let b8= 10;
+console.log(a12&b8);
+
+// 2. |
+// this is called bitwise or
+// this bitwise operator set bit to 1 if one of the sides have 1
+// for exp:- a=5;b=10,a|b;//output :- 15;
+// ----------------------------
+// |  |__8__|__4__|__2__|__1__|
+// |5 |__0__|__1__|__0__|__1__|
+// |__|__ __|__ __|__ __|__ __|
+// |10|__1__|__0__|__1__|__0__|
+// |__|__ __|__ __|__ __|__ __|
+// | t|__1__|__1__|__1__|__1__|
+// ----------------------------
+let a13 = 5;
+let b9= 10;
+console.log(a13|b9);
+
+// 3. ^
+// this is called bitwise xor
+// this bitwise operator set bit to 1 if and only if one of the sides have 1 ##note if bothside have 1 then he will set to 0 
+// for exp:- a=13;b=10,a^b;//output :- 6;
+// ----------------------------
+// |  |__8__|__4__|__2__|__1__|
+// |13|__1__|__1__|__0__|__1__|
+// |__|__ __|__ __|__ __|__ __|
+// |11|__1__|__0__|__1__|__1__|
+// |__|__ __|__ __|__ __|__ __|
+// | t|__0__|__1__|__1__|__0__|
+// ----------------------------
+let a14 = 13;
+let b10= 11;
+console.log(a14^b10);
+
+// 4.~ 
+// this is called bitwise not
+// this bitwise operator convert 0 to 1,1 to 0 
+// for exp:- a=13;~a;//output :- 2;
+// ----------------------------
+// |  |__8__|__4__|__2__|__1__|
+// |13|__1__|__1__|__0__|__1__| 
+// |__|_____|_____|_____|_____|
+// | t|__0__|__0__|__1__|__0__|
+// ----------------------------
+let a15 = 13;
+console.log(~a15);
+
+// 5.<<
+// this is called bitwise left shift
+// syntax:- 1stnumber<<2ndnumber
+// in this bitwse operator first convert the decimal into binary of 1st number and then add the no of of zeros equvivlent to the 2nd number at the end
+// for exp:- a=13;a<<2;13=1101;13<<2=1101<<00=110100(which is equal to 50) 
+// -------------------------------------------
+// |     |__32_|__16_|__8__|__4__|__2__|__1__|
+// |13   |__0__|__0__|__1__|__1__|__0__|__1__| 
+// |_____|_____|_____|_____|_____|_____|_____|
+// |13<<2|__1__|__1__|__0__|__1__|__0__|__0__|
+// -------------------------------------------
+let a16=13;
+console.log(a16<<2);
+
+// 6.>>
+// this is called bitwise right shift
+// syntax:- 1stnumber>>2ndnumber
+// in this bitwse operator first convert the decimal into binary of 1st number and then rmove the no of of digits equvivlent to the 2nd number from the end
+// for exp:- a=13;a>>2;13=1101;13>>2==11(which is equal to 3) 
+// -------------------------------
+// |     |__8__|__4__|__2__|__1__|
+// |13   |__1__|__1__|__0__|__1__| 
+// |_____|_____|_____|_____|_____|
+// |13<<2|__0__|__0__|__1__|__1__|
+// -------------------------------
+let a17=13;
+console.log(a17>>2);
+
+// 7.>>>
+// this is called bitwise unsigned right shift
+// syntax:- 1stnumber>>>2ndnumber
+// this bitwse operator is similar to right shift but the difference is that we can use this with a negitve integer except normal riht shift
+let a18=-13;
+console.log(a18>>>2);
